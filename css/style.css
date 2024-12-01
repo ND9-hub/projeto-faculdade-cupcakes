@@ -1,0 +1,444 @@
+/* Geral */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../imgs/fundo.jpg');
+    background-repeat: repeat;
+    background-size: 174px 174px;
+    height: 100vh;
+}
+
+
+header {
+    background-color: wheat;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 10px;
+    font-style: italic;
+}
+
+header img {
+    width: 40px;
+    filter: grayscale(100%) brightness(0);
+}
+
+.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-container, .produto-container, .produto-detalhe {
+    padding: 20px;
+    text-align: center;
+}
+
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Botões em geral */
+
+button {
+    color: white;
+    border: none;
+}
+
+button:enabled {
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+/* Trilhas de navegação */
+
+.breadcrumb {
+    font-size: 14px;
+    margin: 10px 20px;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Login */
+
+input[type="email"], input[type="password"], input[type="number"], button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Cadastro */
+
+.cadastro-container {
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cadastro-form input[type="text"], 
+#cadastro-form input[type="email"], 
+#cadastro-form input[type="password"], 
+#cadastro-form input[type="number"],
+
+#cadastro-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#cadastro-form input {
+    background-color: #f8f8f8;
+}
+
+#email, #senha, #confirma-senha {
+    width: 96%;
+}
+
+#nome, #cep, #estado, #cidade, #rua, #numero, #complemento {
+    margin-left: 10px;
+    width: 96%;
+}
+
+#cadastro-pai {
+    display: flex;
+}
+
+#cadastro-form button {
+    background-color: #b0b0b0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#cadastro-forminput:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Modal sobre os termos de uso no cadastro */
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #f8f8f8;
+    margin: 10% auto;
+    padding: 5px 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+
+/* Produtos */
+
+.produto-container {
+    /background-color: white;
+    width: 80%;
+    margin: auto;
+    /box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.produto-con{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 50px
+}
+
+.produto {
+    width: 150px;
+    text-align: center;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.produto a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Produto selecionado */
+
+.produto-detalhe {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.produto-detalhe img {
+    width: 100px;
+    border-radius: 4px;
+}
+
+.produto-detalhe input {
+    width: 50px;
+    background-color: white;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Produto no carrinho */
+
+.carrinho-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carrinho-con {
+    padding: 40px;
+}
+
+.produto-item {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    background-color: #eee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.produto-item:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.produto-item img {
+    width: 110px;
+    height: 110px;
+}
+
+.produto-cont {
+    margin-left: 20px;
+}
+
+s {
+    color: #555;
+    font-size: 0.9em;
+}
+
+#enderecos {
+    margin: 30px 0;
+}
+
+.produto-item button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.produto-item button:hover {
+    background-color: #e53935;
+}
+
+/* Modal do QR-Code PIX */
+
+#modal-pagamento {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#modal-content img {
+    width: 100%;
+    max-width: 250px;
+}
+
+#modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Conta do usuário */
+
+.conta-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.conta-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.conta-container fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+}
+
+.conta-container legend {
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 0 10px;
+}
+
+.conta-container input[type="text"] {
+    background-color: #f8f8f8;
+}
+
+.conta-container input[type="text"], .conta-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.conta-container input[type="text"]:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Deslogar da conta */
+
+#sair-link {
+    color: firebrick;
+}
+
+/* Quem Somos */
+
+.about-container {
+    text-align: center;
+    margin: 40px;
+}
+
+.about-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.about-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 80%;
+    margin: 20px auto;
+}

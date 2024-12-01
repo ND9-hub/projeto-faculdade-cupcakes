@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Supercakes</title>
+    <link rel="shortcut icon" href="../imgs/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="../imgs/logo.png">
+            <h1>Supercakes</h1>
+        </div>
+        <nav>
+            <a href="carrinho.html">Carrinho (<span id="total-carrinho">0</span>)</a>
+            <a href="conta.html" id="conta-link">Conta</a>
+            <a href="#" id="sair-link" onclick="deslogar()">Sair</a>
+        </nav>
+    </header>
+    <nav class="breadcrumb">
+        <a href="produtos.html">Home</a> &gt; Produto
+    </nav>
+    <div class="produto-detalhe">
+        <img src="" alt="">
+        <h2></h2>
+        <p></p>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" max="99" value="1">
+        <p>Preço: <s id="oferta"></s> R$ <span id="preco">0.00</span></p>
+        <p>Total: R$ <span id="total">0.00</span></p>
+        <button type="button" onclick="adicionarCarrinho()">Adicionar ao Carrinho</button>
+    </div>
+    <script src="../js/produto.js"></script>
+</body>
+</html>

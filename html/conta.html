@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta - Supercakes</title>
+    <link rel="shortcut icon" href="../imgs/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="../imgs/logo.png">
+            <h1>Supercakes</h1>
+        </div>
+        <nav>
+            <a href="carrinho.html">Carrinho (<span id="total-carrinho">0</span>)</a>
+            <a href="conta.html" id="conta-link">Conta</a>
+            <a href="#" id="sair-link" onclick="deslogar()">Sair</a>
+        </nav>
+    </header>
+    <nav class="breadcrumb">
+        <a href="produtos.html">Home</a> &gt; Conta
+    </nav>
+    <div class="conta-container">
+        <h2>Minha Conta</h2>
+        <form id="conta-form">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <p><strong>Nome:</strong> <span id="nome-usuario"></span></p>
+                <p><strong>Email:</strong> <span id="email-usuario"></span></p>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <input type="text" id="cep" placeholder="Digite seu CEP*" required>
+                <input type="text" id="estado" placeholder="Estado" readonly>
+                <input type="text" id="cidade" placeholder="Cidade" readonly>
+                <input type="text" id="rua" placeholder="Rua" readonly>
+                <input type="text" id="numero" placeholder="Digite o número*" required>
+                <input type="text" id="complemento" placeholder="Complemento (opcional)">
+            </fieldset>
+
+            <button type="button" id="btn-salvar" disabled onclick="salvarEndereco()">Salvar Informações</button>
+        </form>
+    </div>
+    <script src="../js/conta.js"></script>
+</body>
+</html>

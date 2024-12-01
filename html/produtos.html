@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercakes</title>
+    <link rel="shortcut icon" href="../imgs/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="../imgs/logo.png">
+            <h1>Supercakes</h1>
+        </div>
+        <nav>
+            <a href="carrinho.html">Carrinho (<span id="total-carrinho">0</span>)</a>
+            <a href="conta.html" id="conta-link">Conta</a>
+            <a href="#" id="sair-link" onclick="deslogar()">Sair</a>
+        </nav>
+    </header>
+    <nav class="breadcrumb">
+        <a href="produtos.html">Home</a>
+    </nav>
+    <div class="produto-container">
+        <h2>Escolha seu cupcake!</h2>
+        <div class="produto-con">
+            <div class="produto">
+                <a href="produto.html?id=1">
+                    <img src="../imgs/cupcake1.jpg" alt="Cupcake de Chocolate">
+                    <p>Cupcake de Chocolate</p>
+                </a>
+            </div>
+            <div class="produto">
+                <a href="produto.html?id=2">
+                    <img src="../imgs/cupcake2.jpg" alt="Cupcake de Baunilha">
+                    <p>Cupcake de Baunilha</p>
+                </a>
+            </div>
+            <div class="produto">
+                <a href="produto.html?id=3">
+                    <img src="../imgs/cupcake3.jpg" alt="Cupcake de Morango">
+                    <p>Cupcake de Morango</p>
+                </a>
+            </div>
+            <div class="produto">
+                <a href="produto.html?id=4">
+                    <img src="../imgs/cupcake4.jpg" alt="Cupcake de Limão">
+                    <p>Cupcake de Limão</p>
+                </a>
+            </div>
+            <div class="produto">
+                <a href="produto.html?id=5">
+                    <img src="../imgs/cupcake5.jpg" alt="Cupcake de Coco">
+                    <p>Cupcake de Coco</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/produtos.js"></script>
+</body>
+</html>

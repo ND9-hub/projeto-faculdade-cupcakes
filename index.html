@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Supercakes</title>
+    <link rel="shortcut icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="imgs/logo.png">
+            <h1>Supercakes</h1>
+        </div>
+    </header>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="form-login" action="php/login.php" method="post">
+            <input type="email" name="email" id="email-login" required placeholder="Digite seu e-mail" required>
+            <input type="password" name="senha" id="senha-login" required placeholder="Digite sua senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p><a href="html/cadastro.html">Cadastre-se</a> | <a href="html/quem-somos.html">Quem somos</a></p>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

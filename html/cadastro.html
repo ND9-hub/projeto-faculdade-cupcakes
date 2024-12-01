@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Supercakes</title>
+    <link rel="shortcut icon" href="../imgs/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Lib para buscar o CEP -->
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="../imgs/logo.png">
+            <h1>Supercakes</h1>
+        </div>
+    </header>
+    <nav class="breadcrumb">
+        <a href="../index.html">Voltar</a>
+    </nav>
+    <div class="cadastro-container">
+        <h2>Cadastre-se</h2>
+        <form id="cadastro-form" action="../php/cadastrar.php" method="POST">
+            <div id="cadastro-pai">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome e sobrenome*" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail*" required>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha (mínimo 8 caracteres)*" minlength="8" required>
+                    <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha*" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <input type="text" id="cep" name="cep" placeholder="Digite seu CEP*" required>
+                    <input type="text" id="estado" name="estado" placeholder="Estado" readonly>
+                    <input type="text" id="cidade" name="cidade" placeholder="Cidade" readonly>
+                    <input type="text" id="rua" name="rua" placeholder="Rua" readonly>
+                    <input type="text" id="numero" name="numero" placeholder="Digite o número*" required>
+                    <input type="text" id="complemento" name="complemento" placeholder="Complemento (opcional)">
+                </fieldset>
+            </div>
+            <div class="termos-container">
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">
+                    Aceito os <a href="#" id="abrir-termos">termos de uso</a>
+                </label>
+            </div>
+
+            <button type="submit" id="btn-cadastrar" >Cadastrar</button>
+        </form>
+    </div>
+    <div id="modal-termos" class="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+            <h2>Termos de Uso</h2>
+            <p>Atenção. Se não concordar com os termos, não use nossos serviços. A Supercakes pode, a qualquer momento, modificar, atualizar ou alterar estes Termos de Uso.</p>
+            <p>Você concorda em usar nosso site e serviços apenas para fins legais. É proibido usar nossos serviços para: Violar direitos de propriedade intelectual, Enviar conteúdo ilegal, ofensivo ou que infrinja direitos de terceiros, Realizar atividades fraudulentas ou enganosas.</p>
+            <p>Ao criar sua conta, você concorda em fornecer informações verdadeiras, precisas e completas.</p>
+            <p>Este contrato será regido pelas leis do Brasil e qualquer disputa será resolvida nos tribunais competentes.</p>
+            <p>Contato: supercakes@conf.com</p>
+        </div>
+    </div>
+    <script src="../js/cadastro.js"></script>
+</body>
+</html>

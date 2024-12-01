@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Supercakes</title>
+    <link rel="shortcut icon" href="../imgs/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="../imgs/logo.png">
+            <h1>Supercakes</h1>
+        </div>
+        <nav>
+            <a href="produtos.html">Produtos</a>
+            <a href="conta.html" id="conta-link">Conta</a>
+            <a href="#" id="sair-link" onclick="deslogar()">Sair</a>
+        </nav>
+    </header>
+    <nav class="breadcrumb">
+        <a href="produtos.html">Home</a> &gt; Carrinho
+    </nav>
+    <div class="carrinho-container">
+        <div class="carrinho-con">
+            <h2>Seu Carrinho</h2>
+            <div id="mensagem-limite"></div>
+            <div id="produtos-list"></div>
+            <div id="enderecos">
+                <fieldset>
+                    <legend>Escolha o endereço de entrega</legend>
+                    <div id="endereco-entrega">
+                        <p>Endereço para entrega: <span id="endereco-usuario"></span></p>
+                        <p>Endereço para retirada: <span id="endereco-loja">Avenida Sertório, 105, Porto Alegre - RS</span></p>
+                    </div>
+                    <div id="opcao-entrega">
+                        <input type="radio" id="entrega" name="opcaoEntrega" value="entrega" checked>
+                        <label for="entrega">Entregar em casa (taxa de R$ 10.00)</label><br><br>
+                        <input type="radio" id="retirada" name="opcaoEntrega" value="retirada">
+                        <label for="retirada">Retirar na loja</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="total-carrinho">
+                <h3>Total: R$ <span id="total-valor">0.00</span></h3>
+            </div>
+            <button id="finalizar-pagamento" onclick="finalizarPagamento()" disabled>Finalizar Pagamento</button>
+        </div>
+    </div>
+    <div id="modal-pagamento"> <!-- Modal para QR Code -->
+        <div id="modal-content">
+            <h3>Escaneie o QR Code para pagar</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Qrcode_wikipedia_fr_v2clean.png/800px-Qrcode_wikipedia_fr_v2clean.png" alt="QR Code PIX">
+        </div>
+    </div>
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>
